@@ -11,6 +11,10 @@
 	font: var(--button);
 	color: var(--dark-blue);
 	cursor: pointer;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .button:active {
@@ -64,4 +68,16 @@
 
 .is-blue:active {
 	background: #111c81;
+}
+
+@media screen and (min-width: 1400px) {
+	[data-operation='negate'] img {
+		block-size: 31px;
+		inline-size: 26px;
+	}
+
+	[data-operation='delete'] img {
+		block-size: 24px;
+		inline-size: 24px;
+	}
 }

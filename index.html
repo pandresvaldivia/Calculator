@@ -18,48 +18,67 @@
 		<link rel="stylesheet" href="./css/button.css" />
 	</head>
 	<body class="body">
-		<main>
-			<div class="calculator">
-				<div class="calculator-screen">
-					<p>123</p>
-					<p>0</p>
+		<div class="wrapper">
+			<main>
+				<div class="calculator">
+					<div class="calculator-screen">
+						<p id="saved">123</p>
+						<p id="result">0</p>
+					</div>
+					<button class="button is-orange">C</button>
+					<button
+						class="button is-yellow"
+						data-operation="negate"
+						aria-label="negar"
+					>
+						<img
+							src="./assets/icons/symbol.svg"
+							height="28.24"
+							width="23.69"
+							aria-hidden="true"
+						/>
+					</button>
+					<button class="button is-yellow" data-operation="percent">%</button>
+					<button class="button is-purple" data-operation="division">÷</button>
+					<button class="button">7</button>
+					<button class="button">8</button>
+					<button class="button">9</button>
+					<button class="button is-purple" data-operation="multiplication">
+						x
+					</button>
+					<button class="button">4</button>
+					<button class="button">5</button>
+					<button class="button">6</button>
+					<button class="button is-purple" data-operation="subtraction">
+						-
+					</button>
+					<button class="button">1</button>
+					<button class="button">2</button>
+					<button class="button">3</button>
+					<button
+						class="button is-purple"
+						data-operation="
+                    addition"
+					>
+						+
+					</button>
+					<button class="button">0</button>
+					<button class="button">.</button>
+					<button
+						class="button is-grey"
+						data-operation="delete"
+						aria-label="Borrar"
+					>
+						<img
+							src="./assets/icons/backspace.svg"
+							height="21.87"
+							width="21.87"
+							aria-hidden="true"
+						/>
+					</button>
+					<button class="button is-blue">=</button>
 				</div>
-				<button class="button is-orange">C</button>
-				<button class="button is-yellow" aria-label="negar">
-					<img
-						src="./assets/icons/symbol.svg"
-						height="31"
-						width="26"
-						aria-hidden="true"
-					/>
-				</button>
-				<button class="button is-yellow">%</button>
-				<button class="button is-purple">÷</button>
-				<button class="button">7</button>
-				<button class="button">8</button>
-				<button class="button">9</button>
-				<button class="button is-purple">x</button>
-				<button class="button">4</button>
-				<button class="button">5</button>
-				<button class="button">6</button>
-				<button class="button is-purple">-</button>
-				<button class="button">1</button>
-				<button class="button">2</button>
-				<button class="button">3</button>
-				<button class="button is-purple">+</button>
-				<button class="button">0</button>
-				<button class="button">.</button>
-				<button class="button is-grey" aria-label="Borrar">
-					<img
-						src="./assets/icons/backspace.svg"
-						height="24"
-						width=""
-						24
-						aria-hidden="true"
-					/>
-				</button>
-				<button class="button is-blue">=</button>
-			</div>
-		</main>
+			</main>
+		</div>
 	</body>
 </html>

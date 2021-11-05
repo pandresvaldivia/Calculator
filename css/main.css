@@ -5,6 +5,7 @@
 	--grey10: #f4f5f7;
 	--grey20: #dee0e3;
 	--grey30: #e7e9ec;
+	--grey40: #3f474e;
 	--orange: #fe9505;
 	--purple: #d5d6e9;
 	--yellow: #f5f0e3;
@@ -18,9 +19,29 @@
 
 .body {
 	background: url('../assets/images/Calculator.png');
+	background-size: cover;
 	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	block-size: 100vh;
+	min-inline-size: 22.5rem;
+	min-block-size: 39.375rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.body {
+		justify-content: flex-start;
+	}
+
+	.wrapper {
+		padding-inline-start: 18.75rem;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	:root {
+		--normal: 400 28px/32.81px var(--fontBase);
+		--button: 500 25px/29.3px var(--fontBase);
+	}
 }
