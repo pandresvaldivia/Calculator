@@ -1,6 +1,19 @@
 :root {
+	--white: #ffffff;
 	--black: #000000;
 	--grey: #a5a5a5;
+	--grey10: #f4f5f7;
+	--grey20: #dee0e3;
+	--grey30: #e7e9ec;
+	--orange: #fe9505;
+	--purple: #d5d6e9;
+	--yellow: #f5f0e3;
+	--blue: #2d41f5;
+	--blue10: #111c81;
+	--dark-blue: #627785;
+	--fontBase: 'Roboto', sans-serif;
+	--normal: 400 25.51px/29.9px var(--fontBase);
+	--button: 500 22.78px/26.69px var(--fontBase);
 }
 
 .body {

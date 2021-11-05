@@ -1,0 +1,67 @@
+.button {
+	border: none;
+	background: var(--grey10);
+	box-shadow: 3.64px 3.64px 4.6px var(--grey20),
+		-3.64px -3.64px 4.6px var(--white);
+	border-radius: 27.3px;
+	-webkit-border-radius: 27.3px;
+	-moz-border-radius: 27.3px;
+	-ms-border-radius: 27.3px;
+	-o-border-radius: 27.3px;
+	font: var(--button);
+	color: var(--dark-blue);
+	cursor: pointer;
+}
+
+.button:active {
+	background: #cdd5db;
+}
+
+.is-orange {
+	background: var(--orange);
+	color: var(--white);
+	box-shadow: 3.64px 3.64px 3.64px #debf81, -3.64px -3.64px 3.64px #ffffff;
+}
+
+.is-orange:active {
+	background: #dd922b;
+}
+
+.is-purple {
+	background: var(--purple);
+	color: var(--blue10);
+	box-shadow: 3.64px 3.64px 3.64px #d6c9df, -3.64px -3.64px 3.64px #ffffff;
+}
+
+.is-purple:active {
+	background: #7f87d4;
+}
+
+.is-purple.is-active {
+	background: #5563e6;
+	color: var(--white);
+}
+
+.is-yellow {
+	background: var(--yellow);
+	box-shadow: 3.64px 3.64px 3.64px #e0dbce, -3.64px -3.64px 3.64px #ffffff;
+}
+
+.is-yellow:active {
+	background: #e4dece;
+}
+
+.is-grey {
+	background: var(--grey30);
+	box-shadow: 3.64px 3.64px 4.6px #d4d5d7, -3.64px -3.64px 4.6px #ffffff;
+}
+
+.is-blue {
+	background: var(--blue);
+	color: var(--white);
+	box-shadow: 3.64px 3.644px 4.6px #6976e9, -3.64px -3.64px 2.7px #ffffff;
+}
+
+.is-blue:active {
+	background: #111c81;
+}
