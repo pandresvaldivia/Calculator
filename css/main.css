@@ -1,0 +1,13 @@
+:root {
+	--black: #000000;
+	--grey: #a5a5a5;
+}
+
+.body {
+	background: url('../assets/images/Calculator.png');
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	block-size: 100vh;
+}
