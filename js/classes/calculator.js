@@ -9,19 +9,6 @@ class Calculator {
 		this.consolePrint();
 	}
 
-	set operation(operation) {
-		if (this._savedOperand !== '' && this._currentOperand !== 'Math ERROR') {
-			this.calculate();
-		}
-		if (this._currentOperand !== 'Math ERROR') {
-			this._operation = operation;
-			this._savedOperation = `${this._currentOperand}${operation}`;
-			this._savedOperand = this._currentOperand;
-			this._currentOperand = '0';
-			this.consolePrint();
-		}
-	}
-
 	write(digit) {
 		if (this._currentOperand === 'Math ERROR') this._currentOperand = '';
 
@@ -47,6 +34,26 @@ class Calculator {
 		this.consolePrint();
 	}
 
+	convert(type) {
+		this._currentOperand =
+			type === '%' ? this._currentOperand / 100 : this._currentOperand * -1;
+
+		this.consolePrint();
+	}
+
+	set operation(operation) {
+		if (this._savedOperand !== '' && this._currentOperand !== 'Math ERROR') {
+			this.calculate();
+		}
+		if (this._currentOperand !== 'Math ERROR') {
+			this._operation = operation;
+			this._savedOperation = `${this._currentOperand}${operation}`;
+			this._savedOperand = this._currentOperand;
+			this._currentOperand = '0';
+			this.consolePrint();
+		}
+	}
+
 	calculate() {
 		if (this._currentOperand === 'Math ERROR' || this._savedOperand === '')
 			return;
@@ -68,6 +75,9 @@ class Calculator {
 						? this.mathError()
 						: this._savedOperand / this._currentOperand;
 				break;
+			case '%':
+				result = this._savedOperand / 100;
+				break;
 
 			default:
 				break;
@@ -75,6 +85,7 @@ class Calculator {
 
 		this._currentOperand = result;
 		this._operation = undefined;
+		this._savedOperand = '';
 		this.consolePrint();
 	}
 

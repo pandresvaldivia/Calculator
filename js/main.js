@@ -6,6 +6,7 @@ import {
 	$clearBtn,
 	$operations,
 	$calculate,
+	$conversions,
 } from './selectors.js';
 
 const calculator = new Calculator($result, $saved);
@@ -23,5 +24,11 @@ for (const $operation of $operations) {
 	$operation.addEventListener(
 		'click',
 		() => (calculator.operation = $operation.dataset.operation)
+	);
+}
+
+for (const $conversion of $conversions) {
+	$conversion.addEventListener('click', () =>
+		calculator.convert($conversion.dataset.conversion)
 	);
 }
