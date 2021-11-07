@@ -1,20 +1,23 @@
 .button {
-	border: none;
+	align-items: center;
 	background: var(--grey10);
-	box-shadow: 3.64px 3.64px 4.6px var(--grey20),
-		-3.64px -3.64px 4.6px var(--white);
-	border-radius: 27.3px;
-	-webkit-border-radius: 27.3px;
-	-moz-border-radius: 27.3px;
-	-ms-border-radius: 27.3px;
-	-o-border-radius: 27.3px;
-	font: var(--button);
+	box-shadow: 0.2275rem 0.2275rem 0.2875rem var(--grey20),
+		-0.2275rem -0.2275rem 0.2875rem var(--white);
+	border: none;
+	border-radius: 1.7063rem;
 	color: var(--dark-blue);
 	cursor: pointer;
-	user-select: none;
 	display: flex;
-	align-items: center;
+	font: var(--button);
 	justify-content: center;
+	user-select: none;
+	-moz-border-radius: 1.7063rem;
+	-moz-user-select: none;
+	-ms-border-radius: 1.7063rem;
+	-ms-user-select: none;
+	-o-border-radius: 1.7063rem;
+	-webkit-border-radius: 1.7063rem;
+	-webkit-user-select: none;
 }
 
 .button:active {
@@ -23,8 +26,9 @@
 
 .is-orange {
 	background: var(--orange);
+	box-shadow: 0.2275rem 0.2275rem 0.2275rem #debf81,
+		-0.2275rem -0.2275rem 0.2275rem #ffffff;
 	color: var(--white);
-	box-shadow: 3.64px 3.64px 3.64px #debf81, -3.64px -3.64px 3.64px #ffffff;
 }
 
 .is-orange:active {
@@ -33,8 +37,9 @@
 
 .is-purple {
 	background: var(--purple);
+	box-shadow: 0.2275rem 0.2275rem 0.2275rem #d6c9df,
+		-0.2275rem -0.2275rem 0.2275rem #ffffff;
 	color: var(--blue10);
-	box-shadow: 3.64px 3.64px 3.64px #d6c9df, -3.64px -3.64px 3.64px #ffffff;
 }
 
 .is-purple:active {
@@ -48,7 +53,8 @@
 
 .is-yellow {
 	background: var(--yellow);
-	box-shadow: 3.64px 3.64px 3.64px #e0dbce, -3.64px -3.64px 3.64px #ffffff;
+	box-shadow: 0.2275rem 0.2275rem 0.2275rem #e0dbce,
+		-0.2275rem -0.2275rem 0.2275rem #ffffff;
 }
 
 .is-yellow:active {
@@ -57,13 +63,15 @@
 
 .is-grey {
 	background: var(--grey30);
-	box-shadow: 3.64px 3.64px 4.6px #d4d5d7, -3.64px -3.64px 4.6px #ffffff;
+	box-shadow: 0.2275rem 0.2275rem 0.2875rem #d4d5d7,
+		-0.2275rem -0.2275rem 0.2875rem #ffffff;
 }
 
 .is-blue {
 	background: var(--blue);
 	color: var(--white);
-	box-shadow: 3.64px 3.644px 4.6px #6976e9, -3.64px -3.64px 2.7px #ffffff;
+	box-shadow: 0.2275rem 0.2278rem 0.2875rem #6976e9,
+		-0.2275rem -0.2275rem 0.1688rem #ffffff;
 }
 
 .is-blue:active {

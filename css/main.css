@@ -14,19 +14,20 @@
 	--dark-blue: #627785;
 	--fontBase: 'Roboto', sans-serif;
 	--normal: 400 25.51px/29.9px var(--fontBase);
+	--previous: 400 18px / normal var(--fontBase);
 	--button: 500 22.78px/26.69px var(--fontBase);
 }
 
 .body {
 	background: url('../assets/images/Calculator.png');
 	background-size: cover;
-	margin: 0;
-	display: flex;
-	justify-content: center;
 	align-items: center;
 	block-size: 100vh;
-	min-inline-size: 22.5rem;
+	display: flex;
+	justify-content: center;
+	margin: 0;
 	min-block-size: 39.375rem;
+	min-inline-size: 22.5rem;
 }
 
 @media screen and (min-width: 1024px) {
