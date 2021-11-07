@@ -3,16 +3,18 @@ import {
 	$numbers,
 	$result,
 	$saved,
-	$clearBtn,
+	$clear,
 	$operations,
 	$calculate,
 	$conversions,
+	$delete,
 } from './selectors.js';
 
 const calculator = new Calculator($result, $saved);
 
-$clearBtn.addEventListener('click', () => calculator.clear());
+$clear.addEventListener('click', () => calculator.clear());
 $calculate.addEventListener('click', () => calculator.calculate());
+$delete.addEventListener('click', () => calculator.delete());
 
 for (const $number of $numbers) {
 	$number.addEventListener('click', () =>

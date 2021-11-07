@@ -15,14 +15,19 @@ class Calculator {
 		this._currentOperand =
 			this._currentOperand === '0' && digit !== '.'
 				? digit
-				: digit !== '.' || !this._currentOperand.includes('.')
+				: digit !== '.' || !this._currentOperand.toString().includes('.')
 				? this._currentOperand + digit
 				: this._currentOperand;
 		this.consolePrint();
 	}
 
+	delete() {
+		this._currentOperand = this._currentOperand.toString().slice(0, -1);
+		this.consolePrint();
+	}
+
 	consolePrint() {
-		this._outputSaved.innerText = this._savedOperation;
+		this._outputSaved.innerText = this._operation ? this._savedOperation : '';
 		this._outputOperation.innerText = this._currentOperand;
 	}
 
@@ -47,7 +52,7 @@ class Calculator {
 		}
 		if (this._currentOperand !== 'Math ERROR') {
 			this._operation = operation;
-			this._savedOperation = `${this._currentOperand}${operation}`;
+			this._savedOperation = `${this._currentOperand} ${operation}`;
 			this._savedOperand = this._currentOperand;
 			this._currentOperand = '0';
 			this.consolePrint();
