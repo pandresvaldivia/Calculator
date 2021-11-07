@@ -13,7 +13,7 @@ import {
 const calculator = new Calculator($result, $saved);
 
 $clear.addEventListener('click', () => calculator.clear());
-$calculate.addEventListener('click', () => calculator.calculate());
+$calculate.addEventListener('click', () => calculator.calculate(true));
 $delete.addEventListener('click', () => calculator.delete());
 
 for (const $number of $numbers) {

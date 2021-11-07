@@ -28,7 +28,7 @@ class Calculator {
 
 	consolePrint() {
 		this._outputSaved.innerText = this._operation ? this._savedOperation : '';
-		this._outputOperation.innerText = this._currentOperand;
+		this._outputOperation.innerText = this.formatNumber(this._currentOperand);
 	}
 
 	clear() {
@@ -46,20 +46,28 @@ class Calculator {
 		this.consolePrint();
 	}
 
+	formatNumber(number) {
+		return Number(number).toLocaleString('en-IN', {
+			maximumFractionDigits: 6,
+		});
+	}
+
 	set operation(operation) {
 		if (this._savedOperand !== '' && this._currentOperand !== 'Math ERROR') {
 			this.calculate();
 		}
 		if (this._currentOperand !== 'Math ERROR') {
 			this._operation = operation;
-			this._savedOperation = `${this._currentOperand} ${operation}`;
+			this._savedOperation = `${this.formatNumber(
+				this._currentOperand
+			)} ${operation}`;
 			this._savedOperand = this._currentOperand;
 			this._currentOperand = '0';
 			this.consolePrint();
 		}
 	}
 
-	calculate() {
+	calculate(equal = false) {
 		if (this._currentOperand === 'Math ERROR' || this._savedOperand === '')
 			return;
 
@@ -92,6 +100,7 @@ class Calculator {
 		this._operation = undefined;
 		this._savedOperand = '';
 		this.consolePrint();
+		if (equal) this._currentOperand = '';
 	}
 
 	mathError() {
